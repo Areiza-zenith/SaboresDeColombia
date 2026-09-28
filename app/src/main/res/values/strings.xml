@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Sabores de Colombia</string>
+    <string name="comenzar">Comenzar</string>
+    <string name="desc_fondo">Fachada colonial de Cartagena</string>
+    <string name="desc_logo">Logo de Sabores de Colombia, ruta gastronómica</string>
+    <string name="volver">← Volver</string>
+    <string name="volver_a_regiones">← Volver a Regiones</string>
+    <string name="regiones_titulo">Regiones de Colombia</string>
+    <string name="detalle_plato_titulo">Detalle del Plato</string>
+</resources>

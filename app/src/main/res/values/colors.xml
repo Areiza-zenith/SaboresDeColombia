@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="amarillo_colombia">#FCD116</color>
+    <color name="azul_colombia">#003893</color>
+
+    <color name="region_andina">#FFC107</color>
+    <color name="region_caribe">#42A5F5</color>
+    <color name="region_pacifica">#26A69A</color>
+    <color name="region_orinoquia">#FFA726</color>
+    <color name="region_amazonia">#66BB6A</color>
+</resources>
