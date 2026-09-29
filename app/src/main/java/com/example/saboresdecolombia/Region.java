@@ -1,17 +1,31 @@
 package com.example.saboresdecolombia;
 
-public class Region {
-    private String nombre;
+import java.util.ArrayList;
+import java.util.List;
 
-    public Region(String nombre) {
+public class Region {
+    private final String nombre;
+    private final int colorResId;
+    private final List<Plato> platos = new ArrayList<>();
+
+    public Region(String nombre, int colorResId) {
         this.nombre = nombre;
+        this.colorResId = colorResId;
     }
 
     public String getNombre() {
         return nombre;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public int getColorResId() {
+        return colorResId;
+    }
+
+    public void agregarPlato(Plato plato) {
+        platos.add(plato);
+    }
+
+    public List<Plato> obtenerPlatos() {
+        return platos;
     }
 }

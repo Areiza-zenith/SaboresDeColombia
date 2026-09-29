@@ -8,4 +8,8 @@
     <color name="region_pacifica">#26A69A</color>
     <color name="region_orinoquia">#FFA726</color>
     <color name="region_amazonia">#66BB6A</color>
+
+    <color name="seleccion">#FFF3C4</color>
+    <color name="rojo_favorito">#E53935</color>
+    <color name="verde_compartir">#2E7D32</color>
 </resources>

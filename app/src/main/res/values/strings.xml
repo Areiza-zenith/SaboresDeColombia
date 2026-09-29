@@ -1,10 +1,46 @@
 <resources>
     <string name="app_name">Sabores de Colombia</string>
     <string name="comenzar">Comenzar</string>
+    <string name="volver">← Volver</string>
     <string name="desc_fondo">Fachada colonial de Cartagena</string>
     <string name="desc_logo">Logo de Sabores de Colombia, ruta gastronómica</string>
-    <string name="volver">← Volver</string>
-    <string name="volver_a_regiones">← Volver a Regiones</string>
-    <string name="regiones_titulo">Regiones de Colombia</string>
-    <string name="detalle_plato_titulo">Detalle del Plato</string>
+
+    <!-- Fragmentos -->
+    <string name="encabezado_listado">Regiones y platos</string>
+    <string name="encabezado_detalle">Información del plato</string>
+    <string name="regiones">Regiones</string>
+    <string name="platos_tipicos">Platos típicos</string>
+
+    <!-- Opciones del detalle -->
+    <string name="opcion_perfil">Perfil</string>
+    <string name="opcion_fotos">Fotos</string>
+    <string name="opcion_video">Video</string>
+    <string name="opcion_web">Web</string>
+    <string name="opcion_botones">Botones</string>
+
+    <!-- Perfil -->
+    <string name="region_formato">Región %1$s</string>
+    <string name="ingredientes_principales">Ingredientes principales</string>
+    <string name="historia">Historia</string>
+    <string name="desc_foto_plato">Foto del plato</string>
+    <string name="desc_miniatura">Miniatura de la galería</string>
+
+    <!-- Video -->
+    <string name="video_preparacion">Video de preparación</string>
+    <string name="video_error">No se pudo reproducir el video</string>
+
+    <!-- Web -->
+    <string name="hint_url">https://…</string>
+    <string name="abrir_enlace">Abrir enlace</string>
+    <string name="url_vacia">Escribe una dirección web</string>
+
+    <!-- Botones -->
+    <string name="agregar_favoritos">Agregar a favoritos</string>
+    <string name="quitar_favoritos">Quitar de favoritos</string>
+    <string name="compartir">Compartir</string>
+    <string name="ver_receta">Ver receta</string>
+    <string name="favorito_agregado">Agregado a favoritos</string>
+    <string name="favorito_quitado">Quitado de favoritos</string>
+    <string name="desc_favorito">Plato favorito</string>
+    <string name="compartir_texto">Mira este plato típico de Colombia: %1$s. Receta: %2$s</string>
 </resources>
