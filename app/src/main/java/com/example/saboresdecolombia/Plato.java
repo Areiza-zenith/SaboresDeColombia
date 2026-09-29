@@ -3,87 +3,66 @@ package com.example.saboresdecolombia;
 import java.util.List;
 
 public class Plato {
-    private String nombre;
-    private String origen;
-    private String ingredientes;
-    private String historia;
-    private String preparacion;
-    private String enlace;
-    private List<String> comentarios;
-    private int imagenResId;
+    private final String nombre;
+    private final String origen;
+    private final String ingredientes;
+    private final String historia;
+    private final String urlVideo;
+    private final String urlReceta;
+    private final int imagenResId;
+    private final List<ImagenGaleria> galeria;
+    private boolean favorito;
 
-    public Plato(String nombre, String origen, String ingredientes, String historia, String preparacion, String enlace, List<String> comentarios, int imagenResId) {
+    public Plato(String nombre, String origen, String ingredientes, String historia,
+                 String urlVideo, String urlReceta, int imagenResId, List<ImagenGaleria> galeria) {
         this.nombre = nombre;
         this.origen = origen;
         this.ingredientes = ingredientes;
         this.historia = historia;
-        this.preparacion = preparacion;
-        this.enlace = enlace;
-        this.comentarios = comentarios;
+        this.urlVideo = urlVideo;
+        this.urlReceta = urlReceta;
         this.imagenResId = imagenResId;
+        this.galeria = galeria;
     }
 
     public String getNombre() {
         return nombre;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
     public String getOrigen() {
         return origen;
-    }
-
-    public void setOrigen(String origen) {
-        this.origen = origen;
     }
 
     public String getIngredientes() {
         return ingredientes;
     }
 
-    public void setIngredientes(String ingredientes) {
-        this.ingredientes = ingredientes;
-    }
-
     public String getHistoria() {
         return historia;
     }
 
-    public void setHistoria(String historia) {
-        this.historia = historia;
+    public String getUrlVideo() {
+        return urlVideo;
     }
 
-    public String getPreparacion() {
-        return preparacion;
-    }
-
-    public void setPreparacion(String preparacion) {
-        this.preparacion = preparacion;
-    }
-
-    public String getEnlace() {
-        return enlace;
-    }
-
-    public void setEnlace(String enlace) {
-        this.enlace = enlace;
-    }
-
-    public List<String> getComentarios() {
-        return comentarios;
-    }
-
-    public void setComentarios(List<String> comentarios) {
-        this.comentarios = comentarios;
+    public String getUrlReceta() {
+        return urlReceta;
     }
 
     public int getImagenResId() {
         return imagenResId;
     }
 
-    public void setImagenResId(int imagenResId) {
-        this.imagenResId = imagenResId;
+    public List<ImagenGaleria> getGaleria() {
+        return galeria;
+    }
+
+    public boolean esFavorito() {
+        return favorito;
+    }
+
+    // Alterna el estado de favorito (marcar / desmarcar)
+    public void marcarFavorito() {
+        favorito = !favorito;
     }
 }

@@ -1,25 +1,36 @@
 package com.example.saboresdecolombia;
 
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
 public class RegionAdapter extends RecyclerView.Adapter<RegionAdapter.RegionViewHolder> {
 
-    private final List<Region> regiones;
-
-    public RegionAdapter(List<Region> regiones) {
-        this.regiones = regiones;
+    public interface OnRegionClickListener {
+        void onRegionClick(int posicion);
     }
 
-    // Crea un cuadro vacío usando item_region.xml
+    private final List<Region> regiones;
+    private final OnRegionClickListener listener;
+    private int seleccionada = 0;
+
+    public RegionAdapter(List<Region> regiones, OnRegionClickListener listener) {
+        this.regiones = regiones;
+        this.listener = listener;
+    }
+
+    public void setSeleccionada(int posicion) {
+        seleccionada = posicion;
+        notifyDataSetChanged();
+    }
+
     @NonNull
     @Override
     public RegionViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -28,27 +39,22 @@ public class RegionAdapter extends RecyclerView.Adapter<RegionAdapter.RegionView
         return new RegionViewHolder(vista);
     }
 
-    // Llena el cuadro en la posición "posicion" con los datos reales
     @Override
     public void onBindViewHolder(@NonNull RegionViewHolder holder, int posicion) {
         Region region = regiones.get(posicion);
         holder.txtNombreRegion.setText(region.getNombre());
-
-        // Al tocar el cuadro, abre la pantalla de detalle pasando el nombre de la región
-        holder.itemView.setOnClickListener(v -> {
-            Intent intent = new Intent(v.getContext(), DetallePlatoActivity.class);
-            intent.putExtra("region", region.getNombre());
-            v.getContext().startActivity(intent);
-        });
+        holder.itemView.setBackgroundColor(
+                ContextCompat.getColor(holder.itemView.getContext(), region.getColorResId()));
+        // La región seleccionada se ve completa; las demás, atenuadas
+        holder.itemView.setAlpha(posicion == seleccionada ? 1f : 0.55f);
+        holder.itemView.setOnClickListener(v -> listener.onRegionClick(holder.getAdapterPosition()));
     }
 
-    // Cuántos cuadros hay en total
     @Override
     public int getItemCount() {
         return regiones.size();
     }
 
-    // Guarda las referencias a las vistas de UN cuadro, para no buscar con findViewById cada vez
     public static class RegionViewHolder extends RecyclerView.ViewHolder {
         TextView txtNombreRegion;
 

@@ -3,7 +3,6 @@ package com.example.saboresdecolombia;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
-import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -30,9 +29,9 @@ public class MainActivity extends AppCompatActivity {
         // findViewById busca en el XML el elemento con ese id
         Button btnComenzar = findViewById(R.id.btnComenzar);
 
-        // Al tocar el botón, abre la pantalla de Regiones
+        // Al tocar el botón, abre la pantalla con los dos fragmentos
         btnComenzar.setOnClickListener(v -> {
-            Intent intent = new Intent(MainActivity.this, RegionesActivity.class);
+            Intent intent = new Intent(MainActivity.this, RutasGastronomicasActivity.class);
             startActivity(intent);
         });
     }
