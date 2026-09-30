@@ -13,3 +13,6 @@
 .externalNativeBuild
 .cxx
 local.properties
+
+# Archivos de trabajo (fotos originales y videos pendientes)
+/recursos_pendientes/
